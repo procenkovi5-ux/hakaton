@@ -1,0 +1,45 @@
+3D assets used in Allur Digital Twin — 07.10.2026
+
+ABB IRB 2400-12/1.55
+Authors: Dan Solomon (SwRI), Levi Armstrong (SwRI), ROS-Industrial community.
+Source: https://github.com/ros-industrial/abb/tree/noetic-devel/abb_irb2400_support
+Meshes: meshes/irb2400_common/visual/*.dae
+Kinematics: urdf/irb2400_12_155_macro.xacro
+License: Apache-2.0; original license in ABB-LICENSE.txt.
+Changes: converted nine Collada meshes and the URDF hierarchy into GLB,
+Z-up to Y-up coordinate conversion. Display scale, demonstration joint motion
+and a welding torch are added at runtime. The original mesh geometry is retained.
+The ABB designation identifies the reference asset; installation of this exact
+robot at Allur is not established by the supplied records.
+
+Sedan — Kenney, Car Kit
+Source: https://kenney.nl/assets/car-kit
+License: CC0 1.0 Universal; original notice in KENNEY-LICENSE.txt.
+Source files: Models/GLB format/sedan.glb and Textures/colormap.png.
+Changes: embedded texture; runtime rotation/scale and wheel rotation.
+Generic sedan: not an exact Chevrolet Onix, Cobalt or JAC J7 model.
+
+Factory Conveyor Network — 3D Assets
+Source: https://3dassets.dev/packs/factory-conveyor-network
+Manifest: https://3dassets.dev/api/v1/packs/factory-conveyor-network
+License: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/
+Original models are disclosed by their publisher as AI generated.
+Downloaded individual GLB models:
+26224 Free roller conveyor -> roller-conveyor.glb
+26320 Industrial filter bank -> filter-bank.glb
+26248 Barcode scanning arch -> sensor-arch.glb
+26393 Assembly workbench -> assembly-workbench.glb
+26465 Power distribution cabinet -> control-cabinet.glb
+Changes: runtime layout and scale. Sensor arch is a visual analogue in the
+inspection area; these props do not implement equipment control or simulation.
+
+All model files are served locally. models.js embeds the same GLB files to support
+file:// launch and fallback. Runtime loader: Three.js GLTFLoader r128 (MIT),
+covered by vendor/THREE-LICENSE.txt. No external asset connection is required.
+The surrounding process layouts are illustrations, not surveyed Allur factory CAD.
+
+Additional equipment supplied by the user in Allur_3d models (08.10.2026).
+Copied GLB files: btf-tool-rack, btf-weld-gun, btf-paint-mix, btf-air-handler, btf-color-board, btf-seat-rack, btf-line-rack, btf-dashboard-cart, btf-torque-tool, btf-aim-board, btf-inspector.
+The supplied provenance describes these as extracts of model.glb; no original
+author or license was supplied. Original source remains in the user folder.
+Changes: scene placement, uniform scale and centering, no geometry changes.
